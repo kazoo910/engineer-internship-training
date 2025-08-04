@@ -49,7 +49,7 @@
                         <!-- 投稿カード -->
                         <div class="post">
                             <div class="post-icon">
-                                <img src="/imgs/egg_purple.png" class="post-image" alt="egg_icon">
+                                <img src="/imgs/cat-icon.png" class="post-image" alt="egg_icon">
                             </div>
                             <div class="post-info" data-id="<?=$post['id']?>">
                                 <input type="text" class="post-name post-not-edit-input" value=<?=$post['name']?> readonly><br>
