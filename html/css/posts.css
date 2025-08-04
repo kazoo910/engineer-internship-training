@@ -1,8 +1,20 @@
 /* 追加するCSS */
+
+/* ヘッダー（てっぺんのタイトル） */
 .header{
-    background-color: red;
+    color:aliceblue;
+    background-color: darkblue;
 }
 
+/* 全体の背景 */
+.content{
+   background-color: wheat;
+}
+
+/* 投稿 */
+.post-title{
+    color:brown;
+}
 
 /* 投稿に関するCSS */
 .post {

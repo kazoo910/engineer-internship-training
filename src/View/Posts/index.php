@@ -33,7 +33,7 @@
                     <input type="text" id="name" name="name" class="post-form-name-input" placeholder="あなたの名前を入力してください。" maxlength="30" required>
                 </div>
                 <div class="post-form-message">
-                    <h4>投稿文</h4>
+                    <h4 class="post-title">投稿文</h4>
                     <textarea id="message" name="message" class="post-form-message-text" placeholder="投稿内容をここに入力してください。" maxlength="140" required></textarea>
                 </div>
 
