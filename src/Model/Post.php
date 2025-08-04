@@ -14,10 +14,10 @@ class Post
      * @param string $name 投稿者名
      * @param string $message 日報内容
      */
-    public function save(string $name, string $message): void
+    public function save(string $name, string $message, int $icon): void
     {
         $pdo = $this->dbConnect();
-        $query = "INSERT INTO posts(`name`, `message`) VALUE('$name', '$message')";
+        $query = "INSERT INTO posts(`name`, `message`, `icon`) VALUE('$name', '$message', '$icon')";
         $pdo->query($query);
     }
 
@@ -55,12 +55,12 @@ class Post
     /**
      * DBにあるデータを取得する
      *
-     * @return array{name: string, message: string} 取得したデータ
+     * @return array{name: string, message: string, icon: int} 取得したデータ
      */
     public function fetch(): array
     {
         $pdo = $this->dbConnect();
-        $sql = "SELECT `id`, `name`, `message` 
+        $sql = "SELECT `id`, `name`, `message`, `icon`
             FROM posts 
             ORDER BY `id` DESC";
         $statement = $pdo->query($sql);

@@ -25,6 +25,8 @@ class PostsController extends AppController
 
         $post = new Post();
         $posts = $post->fetch();
+        //echo '<pre>';
+        //var_dump($posts);
         $this->assign('posts', $posts);
         $this->show('Posts/index.php');
 
@@ -39,10 +41,14 @@ class PostsController extends AppController
     public function create(): void
     {
         $name = $this->request->getData('name');
+        $icon = $this->request->getData('icon');
         $message = $this->request->getData('message');
 
+        $icon=(int)$icon;
+        // var_dump($icon);
         $post = new Post();
-        $post->save($name, $message);
+        $post->save($name, $message, $icon);
+        
 
         header('Location: /');
     }
