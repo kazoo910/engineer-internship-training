@@ -33,7 +33,7 @@ class Post
         // 未実装
         // 必須課題3:投稿更新機能
         $pdo = $this->dbConnect();
-        $query = "<ここにクエリを入力します>";
+        $query = "UPDATE `posts` SET `name`='$name', `message`='$message' WHERE `id`='$id'";
         $pdo->query($query);
     }
 
@@ -44,8 +44,12 @@ class Post
      */
     public function delete(int $id): void
     {
+        
         // 未実装
         // 応用課題:投稿削除機能
+        $pdo = $this->dbConnect();
+        $query =" DELETE FROM `posts` WHERE `id` = '$id'";
+        $pdo->query($query);
     }
 
     /**

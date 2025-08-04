@@ -26,7 +26,6 @@ class PostsController extends AppController
         $post = new Post();
         $posts = $post->fetch();
         $this->assign('posts', $posts);
-
         $this->show('Posts/index.php');
 
         return;
@@ -56,8 +55,6 @@ class PostsController extends AppController
     public function edit(): void
     {
         // TODO: 必須課題3:投稿更新機能実装時に消す
-        echo 'この機能は未完成です';
-        return;
 
         $name = $this->request->getData('name');
         $message = $this->request->getData('message');
@@ -75,9 +72,9 @@ class PostsController extends AppController
      */
     public function delete(): void
     {
-        // TODO: 応用課題:投稿削除機能実装時に消す
-        echo 'この機能は未完成です';
-        return;
+        /*/ TODO: 応用課題:投稿削除機能実装時に消す
+         echo 'この機能は未完成です';
+         return; */
 
         $id = (int)$this->request->getData('id');
 
