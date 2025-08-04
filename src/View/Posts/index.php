@@ -29,21 +29,22 @@
             <!-- 投稿フォーム -->
             <form method="POST" action="/Posts/create" class="post-form">
                 <div class="post-form-name">
-                    <h4>名前</h4>
+                    <h4 class="post-title">名前</h4>
                     <input type="text" id="name" name="name" class="post-form-name-input" placeholder="あなたの名前を入力してください。" maxlength="30" required>
                 </div>
                 <div class="post-form-message">
-                    <h4 class="post-title">投稿文</h4>
+                    <h4 class="post-title">マーキング文章（投稿文）</h4>
                     <textarea id="message" name="message" class="post-form-message-text" placeholder="投稿内容をここに入力してください。" maxlength="140" required></textarea>
                 </div>
 
                 <div class="post-form-submit">
-                    <button type="submit" class="post-form-submit-button">投稿</button>
+                    <button type="submit" class="post-form-submit-button">マーキングをする（投稿）</button>
                 </div>
             </form>
             <hr>
             <!-- 投稿一覧 -->
             <div class="posts">
+                <h4 class="post-title"> みんなのマーキング（みんなの投稿）</h4>
                 <?php if ($this->get('posts')) : ?>
                     <?php foreach ($this->get('posts') as $post) : ?>
                         <!-- 投稿カード -->
